@@ -14,6 +14,8 @@ int _printf(const char *format, ...)
 	int (*func)(va_list);
 	int count = 0;
 
+	if (format != NULL)
+	{
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
@@ -33,7 +35,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				putchar(format[i]);
+				putchar(format[i + 1]);
 				count++;
 				i++;
 			}
@@ -44,6 +46,7 @@ int _printf(const char *format, ...)
 			i++;
 			count++;
 		}
+	}
 	}
 	return (count);
 }
