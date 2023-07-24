@@ -7,7 +7,7 @@
  */
 int print_char(va_list list)
 {
-	char temp = va_arg(list, char);
+	char temp = va_arg(list, int);
 
 	putchar(temp);
 	return (1);
