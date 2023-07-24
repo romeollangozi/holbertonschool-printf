@@ -41,6 +41,7 @@ int _printf(const char *format, ...)
 			count++;
 		}
 	}
+		return (count);
 	}
-	return (count);
+	return (-1);
 }
