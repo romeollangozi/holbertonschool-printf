@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			func = get_function(format[i + 1]);
 			if (func)
 			{
-				func(args);
+				count += func(args);
 				i++;
 			}
 			else
