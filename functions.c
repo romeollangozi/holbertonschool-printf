@@ -12,3 +12,31 @@ int print_char(va_list list)
 	putchar(temp);
 	return (1);
 }
+
+/**
+ * print_string - prints string from va_list
+ *@list: list of arguments
+ *Return: length of the string
+ */
+
+int print_string(va_list list)
+{
+	char *temp = va_arg(list, char *);
+	int i = 0;
+	int length = 0;
+
+	while (temp[i] != '\0')
+	{
+		putchar(temp[i]);
+		length++;
+		i++;
+	}
+
+	return (length);
+}
+
+/**
+ * print_int - prints integer from va_list as a string
+ *@list: list of arguments
+ *Return: length of numbers
+ */
