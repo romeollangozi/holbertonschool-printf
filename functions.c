@@ -24,13 +24,27 @@ int print_string(va_list list)
 	char *temp = va_arg(list, char *);
 	int i = 0;
 	int length = 0;
+	char *nul = "(null)";
 
+	if (temp)
+	{
 	while (temp[i] != '\0')
 	{
 		putchar(temp[i]);
 		length++;
 		i++;
 	}
+	}
+	else
+	{
+		while (nul[i] != '\0')
+		{
+			putchar(nul[i]);
+			length++;
+			i++;
+		}
+	}
+
 
 	return (length);
 }
