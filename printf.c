@@ -27,17 +27,11 @@ int _printf(const char *format, ...)
 				count += func(args);
 				i += 2;
 			}
-			else if (format[i + 1] == '%')
-			{
-				putchar(format[i]);
-				i += 2;
-				count++;
-			}
 			else
 			{
 				putchar(format[i + 1]);
 				count++;
-				i++;
+				i += 2;
 			}
 		}
 		else
