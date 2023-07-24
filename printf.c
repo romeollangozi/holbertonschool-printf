@@ -28,11 +28,13 @@ int _printf(const char *format, ...)
 			else
 			{
 				putchar(format[i]);
+				count++;
 			}
 		}
 		else
 		{
 			putchar(format[i]);
+			count++;
 		}
 		i++;
 	}
