@@ -13,6 +13,8 @@ int (*get_function(char c))(va_list)
 	print prints[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"i", print_int},
+		{"d", print_int},
 		{NULL, NULL}
 	};
 
