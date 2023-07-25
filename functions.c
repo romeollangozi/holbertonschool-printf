@@ -49,8 +49,3 @@ int print_string(va_list list)
 	return (length);
 }
 
-/**
- * print_int - prints integer from va_list as a string
- *@list: list of arguments
- *Return: length of numbers
- */

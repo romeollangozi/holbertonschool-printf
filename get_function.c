@@ -25,3 +25,4 @@ int (*get_function(char c))(va_list)
 
 	return (NULL);
 }
+

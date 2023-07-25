@@ -20,3 +20,4 @@ int print_int(va_list list);
 int print_float(va_list list);
 int (*get_function(char c))(va_list);
 #endif
+
