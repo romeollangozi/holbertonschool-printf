@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 /**
  *_printf - function that produces output according to a format
  *@format: format to be used to print the output
@@ -13,35 +14,32 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int (*func)(va_list);
 	int count = 0;
+	int length = strlen(format);
 
 	if (format != NULL)
 	{
-	va_start(args, format);
-	while (format[i] != '\0')
-	{
-		if (format[i] == '%' && format[i + 1] != '\0')
-		{
-			func = get_function(format[i + 1]);
-			if (func)
+		if ((length != 1) || (format[0] != '%'))
 			{
-				count += func(args);
-				i += 2;
-			}
-			else
+			va_start(args, format);
+			while (format[i] != '\0')
 			{
-				putchar(format[i + 1]);
+				if (format[i] == '%')
+				{
+					func = get_function(format[i + 1]);
+					if (func)
+					{
+						count += func(args);
+						i += 2;
+					}
+					else if (format[i + 1] == '%')
+						i++;
+				}
+				putchar(format[i]);
+				i++;
 				count++;
-				i += 2;
 			}
-		}
-		else
-		{
-			putchar(format[i]);
-			i++;
-			count++;
-		}
-	}
 		return (count);
+		}
 	}
 	return (-1);
 }
