@@ -57,9 +57,9 @@ int print_string(va_list list)
 
 int print_int(va_list list)
 {
-	double number = va_arg(list, double);
-	double l = 1;
-	double t = number;
+	long int number = (long int) va_arg(list, int);
+	long int l = 1;
+	long int t = number;
 	int r = 1;
 
 	if (number < 0)
@@ -77,45 +77,9 @@ int print_int(va_list list)
 	}
 	while (l > 0)
 	{
-		putchar('0' + ((int) number / (int)  l) % 10);
+		putchar('0' + (number / l) % 10);
 		l = l / 10;
 	}
 	return (r);
-
-}
-
-/**
- * print_double - prints an double from va_list
- * @list: list of arguments
- * Return: length of the int
- */
-
-int print_double(va_list list)
-{
-	double number = va_arg(list, double);
-	double l = 1;
-	double t = number;
-	int r = 1;
-
-	if (number < 0)
-	{
-		putchar('-');
-		r++;
-		t = t * -1;
-		number = number * -1;
-	}
-	while (t > 9)
-	{
-		t = t / 10;
-		l = l * 10;
-		r++;
-	}
-	while (l > 0)
-	{
-		putchar('0' + ((int) number / (int) l) % 10);
-		l = l / 10;
-	}
-	return (r);
-
 }
 
