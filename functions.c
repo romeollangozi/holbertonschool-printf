@@ -65,9 +65,9 @@ int print_int(va_list list)
 
 	if (number < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		t = t * -1;
-		n = n * -1;
+		number = number * -1;
 	}
 	while (t > 9)
 	{
@@ -77,7 +77,7 @@ int print_int(va_list list)
 	}
 	while (l > 0)
 	{
-		_putchar('0' + (n / l) % 10);
+		putchar('0' + (number / l) % 10);
 		l = l / 10;
 	}
 	return (r);
