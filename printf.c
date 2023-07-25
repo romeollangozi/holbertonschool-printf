@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 					{
 						count += func(args);
 						i += 2;
+						continue;
 					}
 					else if (format[i + 1] == '%')
 						i++;
