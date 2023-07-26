@@ -99,7 +99,7 @@ int convert_binary(unsigned int b, int count)
 		else if (b >= 2)
 		{
 			count = convert_binary(b / 2, count);
-			putchar('0' + (b % 2))
+			putchar('0' + (b % 2));
 		}
 		return (count + 1);
 }
