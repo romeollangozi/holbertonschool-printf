@@ -19,5 +19,6 @@ int print_string(va_list list);
 int print_int(va_list list);
 int print_double(va_list list);
 int (*get_function(char c))(va_list);
+int print_binar(va_list list);
 #endif
 
