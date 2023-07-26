@@ -106,3 +106,8 @@ int convert_binary(unsigned int b, int count)
 	}
 }
 
+
+int print_binary(long int i)
+{
+	return (convert_binary(i, 0));
+}
