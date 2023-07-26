@@ -83,6 +83,13 @@ int print_int(va_list list)
 	return (r);
 }
 
+/**
+ * convert_binary - converts a number into binary with recursion
+ *@b: number to be converted
+ *@count: counts the length of the binary
+ *Return: length of the binary
+ */
+
 int convert_binary(unsigned int b, int count)
 {
 	if (b < 2)
@@ -98,3 +105,4 @@ int convert_binary(unsigned int b, int count)
 		return (count + 1);
 	}
 }
+
