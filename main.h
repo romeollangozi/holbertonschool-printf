@@ -20,5 +20,6 @@ int print_int(va_list list);
 int print_double(va_list list);
 int (*get_function(char c))(va_list);
 int print_binary(va_list list);
+int covert_binary(unsigned int b, int count);
 #endif
 
