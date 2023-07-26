@@ -106,8 +106,12 @@ int convert_binary(unsigned int b, int count)
 	}
 }
 
-
-int print_binary(long int i)
+/**
+ * print_binary - prints number into binary
+ * @list: list of arguments
+ *Return: length of binary output
+ */
+int print_binary(va_list list)
 {
 	return (convert_binary(i, 0));
 }
