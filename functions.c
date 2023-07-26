@@ -112,6 +112,7 @@ int convert_binary(unsigned int b, int count)
 int print_binary(va_list list)
 {
 	unsigned int i = va_arg(list, unsigned int);
+
 	return (convert_binary(i, 0));
 }
 
