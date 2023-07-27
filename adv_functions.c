@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdarg.h>
 /**
  * convert_binary - converts a number into binary with recursion
  *@b: number to be converted
