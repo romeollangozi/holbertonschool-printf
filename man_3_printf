@@ -3,3 +3,9 @@
     _printf - formatted output conversion
 .SH SYNOPSIS
     int _printf(const char *format, ...);
+.SH DESCRIPTION
+    The _printf() function formats and prints output to the standard output stream (stdout). It writes the output to the terminal or other standard output device.
+    The format string defines the output format. It can contain plain characters and conversion specifications. Each conversion specification starts with the character '%', followed by an optional flag, width, precision, and conversion specifier.
+.SH RETURN VALUE
+    Upon successful completion, _printf() returns the total number of characters written to the standard output stream. If an error occurs, it returns a negative value.
+
