@@ -48,6 +48,34 @@ int print_string(va_list list)
 
 	return (length);
 }
+/**
+ *print_int_recursion - prints an int from va_list
+ *@number: number to be printed
+ *@count: number of digits
+ *Return: number of digits
+ */
+int print_int_recursion(long int number, int count)
+{
+	if (number < 0)
+	{
+		putchar('-');
+		count++;
+		number = number * -1;
+	}
+
+	if (number / 10 == 0)
+	{
+		putchar('0' + (number % 10));
+
+	}
+	else
+	{
+		count = print_int_recursion(number / 10, count);
+		putchar('0' + (number % 10));
+	}
+	return (count + 1);
+}
+
 
 /**
  * print_int - prints an int from va_list
@@ -58,60 +86,7 @@ int print_string(va_list list)
 int print_int(va_list list)
 {
 	long int number = (long int) va_arg(list, int);
-	long int l = 1;
-	long int t = number;
-	int r = 1;
 
-	if (number < 0)
-	{
-		putchar('-');
-		r++;
-		t = t * -1;
-		number = number * -1;
-	}
-	while (t > 9)
-	{
-		t = t / 10;
-		l = l * 10;
-		r++;
-	}
-	while (l > 0)
-	{
-		putchar('0' + (number / l) % 10);
-		l = l / 10;
-	}
-	return (r);
-}
-
-/**
- * convert_binary - converts a number into binary with recursion
- *@b: number to be converted
- *@count: counts the length of the binary
- *Return: length of the binary
- */
-
-int convert_binary(unsigned int b, int count)
-{
-	if (b < 2)
-	{
-		putchar('0' + b);
-	}
-		else if (b >= 2)
-		{
-			count = convert_binary(b / 2, count);
-			putchar('0' + (b % 2));
-		}
-		return (count + 1);
-}
-
-/**
- * print_binary - prints number into binary
- * @list: list of arguments
- *Return: length of binary output
- */
-int print_binary(va_list list)
-{
-	unsigned int i = va_arg(list, unsigned int);
-	return (convert_binary(i, 0));
+	return (print_int_recursion(number, 0));
 }
 
