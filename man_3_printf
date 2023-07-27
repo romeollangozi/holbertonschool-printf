@@ -18,3 +18,8 @@
     printf("Hello, world!\n");
     int num = 42;
     printf("The answer is %d.\n", num);
+2:06
+.SH AUTHOR
+    This man page was written by Romeo & Donald.
+.SH COPYRIGHT
+    Copyright ©️ 2023
