@@ -8,4 +8,13 @@
     The format string defines the output format. It can contain plain characters and conversion specifications. Each conversion specification starts with the character '%', followed by an optional flag, width, precision, and conversion specifier.
 .SH RETURN VALUE
     Upon successful completion, _printf() returns the total number of characters written to the standard output stream. If an error occurs, it returns a negative value.
-
+.SH FORMAT SPECIFIERS
+    The following format specifiers are supported:
+    %c   Character: Outputs a single character.
+    %s   String: Outputs a null-terminated string.
+    %d, %i Integer: Outputs a signed decimal integer.
+.SH EXAMPLES
+    The following examples demonstrate the usage of the printf() function:
+    printf("Hello, world!\n");
+    int num = 42;
+    printf("The answer is %d.\n", num);
