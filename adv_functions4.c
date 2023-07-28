@@ -40,8 +40,19 @@ int print_pointer(va_list list)
 	int count;
 	void *pointer;
 
-	count = 2;
 	pointer = va_arg(list, void *);
+	if (!pointer)
+	{
+		count = 5;
+		putchar('(');
+		putchar('n');
+		putchar('i');
+		putchar('l');
+		putchar(')');
+
+		return (count);
+	}
+	count = 2;
 	putchar('0');
 	putchar('x');
 	count += convert_to_hex_Recursion((long int) pointer, 0);
