@@ -44,7 +44,8 @@ int print_pointer(va_list list)
 	pointer = va_arg(list, void *);
 	putchar('0');
 	putchar('x');
-	count = convert_to_hex_Recursion((long int) pointer, 0);
+	count += convert_to_hex_Recursion((long int) pointer, 0);
 
 	return (count);
 }
+
