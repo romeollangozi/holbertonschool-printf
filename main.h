@@ -30,5 +30,6 @@ int convert_to_hex_recursion(unsigned int number, int count);
 int convert_to_HEX(va_list list);
 int convert_to_HEX_recursion(unsigned int number, int count);
 int print_STRING(va_list list);
+int print_pointer(va_list list);
 #endif
 

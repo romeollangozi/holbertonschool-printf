@@ -21,6 +21,7 @@ int (*get_function(char c))(va_list)
 		{"x", convert_to_hex},
 		{"X", convert_to_HEX},
 		{"S", print_STRING},
+		{"p", print_pointer},
 		{NULL, NULL}
 	};
 
