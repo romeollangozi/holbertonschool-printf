@@ -32,3 +32,37 @@ int print_binary(va_list list)
 	return (convert_binary(i, 0));
 }
 
+/**
+ *print_uint_recursion - prints an unsigned int from va_list
+ *@number: number to be printed
+ *@count: number of digits
+ *Return: number of digits
+ */
+int print_uint_recursion(unsigned int number, int count)
+{
+
+	if (number / 10 == 0)
+	{
+		putchar('0' + (number % 10));
+
+	}
+	else
+	{
+		count = print_uint_recursion(number / 10, count);
+		putchar('0' + (number % 10));
+	}
+	return (count + 1);
+}
+
+/**
+*print_uint - prints an usigned int
+*@list: list of arguments
+*Return: number of digits of the number printed
+*/
+
+int print_uint(va_list list)
+{
+	unsigned int number = va_arg(list, unsigned int);
+
+	return (print_uint_recursion(number, 0));
+}

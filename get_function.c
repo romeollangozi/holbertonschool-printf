@@ -16,6 +16,10 @@ int (*get_function(char c))(va_list)
 		{"i", print_int},
 		{"b", print_binary},
 		{"d", print_int},
+		{"u", print_uint},
+		{"o", convert_octal},
+		{"x", convert_to_hex},
+		{"X", convert_to_HEX},
 		{NULL, NULL}
 	};
 
