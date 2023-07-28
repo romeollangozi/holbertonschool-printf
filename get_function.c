@@ -20,6 +20,7 @@ int (*get_function(char c))(va_list)
 		{"o", convert_octal},
 		{"x", convert_to_hex},
 		{"X", convert_to_HEX},
+		{"S", print_STRING},
 		{NULL, NULL}
 	};
 
