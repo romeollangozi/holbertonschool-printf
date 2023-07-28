@@ -54,7 +54,7 @@ int print_STRING(va_list list)
 
 	while (string[i] != '\0')
 	{
-		if (string[i] > 32 && string[i] < 127)
+		if (string[i] >= 32 && string[i] < 127)
 		{
 			putchar(string[i]);
 			count++;
